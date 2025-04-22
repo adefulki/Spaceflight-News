@@ -27,7 +27,9 @@ class NewsRepoImpl @Inject constructor(
     override suspend fun getArticles(): ArrayList<Article> {
         val local = localArticleDatasource.getAll()
         return if (local.isEmpty()) {
-            remoteArticleDatasource.getAll()
+            val remote = remoteArticleDatasource.getAll()
+            localArticleDatasource.insertAll(remote)
+            remote
         } else {
             local
         }
@@ -36,7 +38,9 @@ class NewsRepoImpl @Inject constructor(
     override suspend fun getBlogs(): ArrayList<Blog> {
         val local = localBlogDatasource.getAll()
         return if (local.isEmpty()) {
-            remoteBlogDatasource.getAll()
+            val remote = remoteBlogDatasource.getAll()
+            localBlogDatasource.insertAll(remote)
+            remote
         } else {
             local
         }
@@ -45,7 +49,9 @@ class NewsRepoImpl @Inject constructor(
     override suspend fun getReports(): ArrayList<Report> {
         val local = localReportDatasource.getAll()
         return if (local.isEmpty()) {
-            remoteReportDatasource.getAll()
+            val remote = remoteReportDatasource.getAll()
+            localReportDatasource.insertAll(remote)
+            remote
         } else {
             local
         }

@@ -6,11 +6,13 @@ import io.github.adefulki.spaceflightnews.domain.model.Launch
 import io.realm.kotlin.types.RealmObject
 import io.realm.kotlin.types.annotations.Ignore
 import io.realm.kotlin.types.annotations.PrimaryKey
+import java.util.UUID
 
 class BlogEntity() : RealmObject {
 
     @PrimaryKey
-    var id: Int? = null
+    var id: String = ""
+    var idBlog: Int? = null
     var title: String? = null
     @Ignore
     var authors: ArrayList<Author> = arrayListOf()
@@ -27,6 +29,8 @@ class BlogEntity() : RealmObject {
     var events: ArrayList<Event> = arrayListOf()
 
     constructor(
+        id: String = UUID.randomUUID().toString(),
+        idBlog: Int? = null,
         title: String? = null,
         authors: ArrayList<Author> = arrayListOf(),
         url: String? = null,
@@ -39,6 +43,8 @@ class BlogEntity() : RealmObject {
         launches: ArrayList<Launch> = arrayListOf(),
         events: ArrayList<Event> = arrayListOf()
     ) : this() {
+        this.id = id
+        this.idBlog = idBlog
         this.title = title
         this.authors = authors
         this.url = url

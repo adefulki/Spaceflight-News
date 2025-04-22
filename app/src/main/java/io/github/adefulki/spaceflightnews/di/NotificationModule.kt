@@ -41,8 +41,8 @@ object NotificationModule {
         @ApplicationContext context: Context
     ): NotificationCompat.Builder {
         return NotificationCompat.Builder(context, "Main Channel ID")
-            .setContentTitle("Logout Otomatis")
-            .setContentText("Anda telah logout otomatis")
+            .setContentTitle("Logout")
+            .setContentText("You have logged out")
             .setSmallIcon(R.mipmap.ic_launcher_round)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
     }

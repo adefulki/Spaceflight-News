@@ -13,8 +13,10 @@ class RecentSearchEntity() : RealmObject {
     var keyword: String? = null
 
     constructor(
+        id: Int? = null,
         keyword: String? = null,
     ) : this() {
+        this.id = id
         this.keyword = keyword
     }
 }

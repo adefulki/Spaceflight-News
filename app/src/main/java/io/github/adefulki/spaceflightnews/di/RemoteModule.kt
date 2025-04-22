@@ -37,11 +37,11 @@ object RemoteModule {
     @Provides
     @Singleton
     fun provideOkHttpClient(
-        certificatePinner: CertificatePinner,
+        // TODO add this if you want ssl pinning, certificatePinner: CertificatePinner,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
-            .certificatePinner(certificatePinner)
+            // TODO add this if you want ssl pinning, .certificatePinner(certificatePinner)
             .addInterceptor(loggingInterceptor) // Optional: Add logging for debugging
             .build()
     }

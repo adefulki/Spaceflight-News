@@ -5,13 +5,13 @@
     <string name="auth0_domain">dev-sdypfgp206vs0qrn.jp.auth0.com</string>
     <string name="auth0_scheme">demo</string>
 
-    <string name="login">Login dengan Auth0</string>
-    <string name="login_success">Login Berhasil</string>
-    <string name="login_failed">Login Gagal</string>
-    <string name="logout_success">Logout Berhasil</string>
-    <string name="logout_failed">Logout Gagal</string>
-    <string name="get_profile_success">Profil Berhasil Didapatkan</string>
-    <string name="get_profile_failed">Profil Gagal Didapatkan</string>
+    <string name="login">Login with Auth0</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="logout_success">Logout Success</string>
+    <string name="logout_failed">Logout Failed</string>
+    <string name="get_profile_success">Fetch Profile Success</string>
+    <string name="get_profile_failed">Fetch Profile Failed</string>
     <string name="title_home">Spaceflight News</string>
     <string name="logout">Logout</string>
 

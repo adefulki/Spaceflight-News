@@ -3,6 +3,7 @@ package io.github.adefulki.spaceflightnews.utils
 import android.content.Context
 import android.content.ContextWrapper
 import androidx.activity.ComponentActivity
+import androidx.compose.ui.Modifier
 import io.github.adefulki.spaceflightnews.data.local.entity.ArticleEntity
 import io.github.adefulki.spaceflightnews.data.local.entity.BlogEntity
 import io.github.adefulki.spaceflightnews.data.local.entity.RecentSearchEntity
@@ -27,6 +28,7 @@ fun Context.getActivity(): ComponentActivity? = when (this) {
 fun ArrayList<Report>.toReportEntities(): List<ReportEntity> {
     return this.map {
         ReportEntity(
+            idReport = it.id,
             title = it.title,
             authors = it.authors,
             url = it.url,
@@ -44,7 +46,7 @@ fun ArrayList<Report>.toReportEntities(): List<ReportEntity> {
 fun RealmResults<ReportEntity>.toReports(): ArrayList<Report> {
     return this.map {
         Report(
-            id = it.id,
+            id = it.idReport,
             title = it.title,
             authors = it.authors,
             url = it.url,
@@ -62,6 +64,7 @@ fun RealmResults<ReportEntity>.toReports(): ArrayList<Report> {
 fun ArrayList<Blog>.toBlogEntities(): List<BlogEntity> {
     return this.map {
         BlogEntity(
+            idBlog = it.id,
             title = it.title,
             authors = it.authors,
             url = it.url,
@@ -79,7 +82,7 @@ fun ArrayList<Blog>.toBlogEntities(): List<BlogEntity> {
 fun RealmResults<BlogEntity>.toBlogs(): ArrayList<Blog> {
     return this.map {
         Blog(
-            id = it.id,
+            id = it.idBlog,
             title = it.title,
             authors = it.authors,
             url = it.url,
@@ -97,6 +100,7 @@ fun RealmResults<BlogEntity>.toBlogs(): ArrayList<Blog> {
 fun ArrayList<Article>.toArticleEntities(): List<ArticleEntity> {
     return this.map {
         ArticleEntity(
+            idArticle = it.id,
             title = it.title,
             authors = it.authors,
             url = it.url,
@@ -114,7 +118,7 @@ fun ArrayList<Article>.toArticleEntities(): List<ArticleEntity> {
 fun RealmResults<ArticleEntity>.toArticles(): ArrayList<Article> {
     return this.map {
         Article(
-            id = it.id,
+            id = it.idArticle,
             title = it.title,
             authors = it.authors,
             url = it.url,
