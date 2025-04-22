@@ -1,6 +1,11 @@
 # Exercise
 This application aims to fulfill the exercise of the recruitment process
 
+## Architecture 🏗️
+- MVVM Architecture (Model - ComposableView - ViewModel)
+- Clean Architecture
+- Hilt - dependency injection
+
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
 - [Jetpack Compose](https://developer.android.com/jetpack/compose) - Jetpack Compose is Android’s modern toolkit for building native UI.
