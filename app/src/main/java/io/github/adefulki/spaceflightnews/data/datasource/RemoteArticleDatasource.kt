@@ -1,7 +1,7 @@
 package io.github.adefulki.spaceflightnews.data.datasource
 
-import io.github.adefulki.spaceflightnews.data.remote.dto.ArticleDto
+import io.github.adefulki.spaceflightnews.domain.model.Article
 
 interface RemoteArticleDatasource {
-    suspend fun getArticles(): ArticleDto
+    suspend fun getAll(): ArrayList<Article>
 }

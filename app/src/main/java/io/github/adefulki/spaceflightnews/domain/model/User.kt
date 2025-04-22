@@ -12,11 +12,12 @@ data class User (
     var familyName: String? = null,
     var createdAt: Date? = null,
     var givenName: String? = null,
-    var idToken: String,
-    var accessToken: String,
+    var idToken: String? = null,
+    var accessToken: String? = null,
     var refreshToken: String? = null,
     var recoveryCode: String? = null,
     var scope: String? = null,
-    var expiresAt: Date,
-    var type: String
+    var expiresAt: Date? = null,
+    var type: String? = null,
+    var isLoggedIn: Boolean = false
 )
