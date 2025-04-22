@@ -52,6 +52,9 @@ android {
 
 dependencies {
 
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.jupiter)
     val composeBom = platform(libs.androidx.compose.bom)
     implementation(composeBom)
     androidTestImplementation(composeBom)
@@ -74,6 +77,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout.compose)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.work.runtime.ktx)
 
     implementation(libs.accompanist.swiperefresh)
     implementation(libs.accompanist.systemuicontroller)

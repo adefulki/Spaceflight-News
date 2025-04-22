@@ -8,6 +8,12 @@
     <string name="login">Login dengan Auth0</string>
     <string name="login_success">Login Berhasil</string>
     <string name="login_failed">Login Gagal</string>
+    <string name="logout_success">Logout Berhasil</string>
+    <string name="logout_failed">Logout Gagal</string>
     <string name="get_profile_success">Profil Berhasil Didapatkan</string>
     <string name="get_profile_failed">Profil Gagal Didapatkan</string>
+    <string name="title_home">Spaceflight News</string>
+    <string name="logout">Logout</string>
+
+    <string name="img_description">temp description</string>
 </resources>

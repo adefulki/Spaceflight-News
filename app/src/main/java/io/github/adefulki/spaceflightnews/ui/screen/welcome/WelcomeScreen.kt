@@ -1,6 +1,9 @@
 package io.github.adefulki.spaceflightnews.ui.screen.welcome
 
+import android.content.Context
+import android.content.ContextWrapper
 import android.widget.Toast
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,6 +29,8 @@ import com.auth0.android.result.UserProfile
 import io.github.adefulki.spaceflightnews.R
 import io.github.adefulki.spaceflightnews.data.pref.UserPref
 import io.github.adefulki.spaceflightnews.domain.model.User
+import io.github.adefulki.spaceflightnews.ui.MyActivity
+import io.github.adefulki.spaceflightnews.utils.getActivity
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
@@ -74,7 +79,8 @@ fun WelcomeScreen(
                             }
 
                             override fun onSuccess(result: UserProfile) {
-                                UserPref(context).user?.apply {
+                                val user = UserPref(context).user
+                                UserPref(context).user = user?.apply {
                                     this.id = result.getId()
                                     this.name = result.name
                                     this.email = result.email
@@ -87,6 +93,7 @@ fun WelcomeScreen(
                                 }
                                 Toast.makeText(context, getProfileSuccessStr, Toast.LENGTH_SHORT)
                                     .show()
+                                (context.getActivity() as MyActivity).startIdleWorker()
                                 onLogInSuccess()
                             }
                         })

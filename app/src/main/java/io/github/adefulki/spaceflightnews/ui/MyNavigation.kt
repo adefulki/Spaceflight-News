@@ -13,6 +13,7 @@ sealed class Screen(
 ) {
     data object Welcome : Screen("welcome")
     data object Home : Screen("home")
+    data object List : Screen("list")
     data object Detail : Screen("detail")
 }
 
@@ -31,11 +32,14 @@ class MyActions(navController: NavController) {
             }
         }
     }
+    val navigateToList: () -> Unit = {
+        navController.navigate(Screen.List.route) {
+            popUpTo(navController.graph.findStartDestination().id)
+        }
+    }
     val navigateToDetail: () -> Unit = {
         navController.navigate(Screen.Detail.route) {
-            popUpTo(navController.graph.findStartDestination().id) {
-                inclusive = true
-            }
+            popUpTo(navController.graph.findStartDestination().id)
         }
     }
     val navigateUp: () -> Unit = {

@@ -17,6 +17,7 @@ fun ComposeApp(defaultRoute: String) {
             navController = navController,
             navigateToWelcome = navigationActions.navigateToWelcome,
             navigateToHome = navigationActions.navigateToHome,
+            navigateToList = navigationActions.navigateToList,
             navigateToDetail = navigationActions.navigateToDetail,
             navigateUp = navigationActions.navigateUp,
             startDestination = defaultRoute

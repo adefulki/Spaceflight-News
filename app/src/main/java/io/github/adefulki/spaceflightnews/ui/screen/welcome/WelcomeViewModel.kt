@@ -16,7 +16,6 @@ import javax.inject.Named
 
 @HiltViewModel
 class WelcomeViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
     private val auth0: Auth0,
     @Named("AUTH0-SCHEME") private val auth0Scheme: String,
     @Named("AUTH0-DOMAIN") private val auth0Domain: String

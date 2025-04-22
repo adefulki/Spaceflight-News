@@ -12,14 +12,14 @@ class UserPref(context: Context) : BaseSharedPreferences(context) {
         get() {
             val json = getString(KEY, "")
             return Gson().fromJson(json, User::class.java)?.apply {
-                this.accessToken = Base64.decode(this.accessToken, Base64.DEFAULT).decodeToString()
+                if (!this.accessToken.isNullOrEmpty()) this.accessToken = Base64.decode(this.accessToken, Base64.DEFAULT).decodeToString()
                 if (!this.refreshToken.isNullOrEmpty()) this.refreshToken = Base64.decode(this.refreshToken, Base64.DEFAULT).decodeToString()
                 if (!this.recoveryCode.isNullOrEmpty()) this.recoveryCode = Base64.decode(this.recoveryCode, Base64.DEFAULT).decodeToString()
             }
         }
         set(value) {
             value?.apply {
-                this.accessToken = Base64.encodeToString(this.accessToken.toByteArray(), Base64.DEFAULT)
+                if (!this.accessToken.isNullOrEmpty()) this.accessToken = Base64.encodeToString(this.accessToken?.toByteArray(), Base64.DEFAULT)
                 if (!this.refreshToken.isNullOrEmpty()) this.refreshToken = Base64.encodeToString(this.refreshToken?.toByteArray(), Base64.DEFAULT)
                 if (!this.recoveryCode.isNullOrEmpty()) this.recoveryCode = Base64.encodeToString(this.recoveryCode?.toByteArray(), Base64.DEFAULT)
             }
