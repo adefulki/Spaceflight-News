@@ -19,8 +19,8 @@ android {
 
         addManifestPlaceholders(
             mutableMapOf(
-                "auth0Domain" to "@string/com_auth0_domain",
-                "auth0Scheme" to "@string/com_auth0_scheme"
+                "auth0Domain" to "@string/auth0_domain",
+                "auth0Scheme" to "@string/auth0_scheme"
             )
         )
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import io.github.adefulki.spaceflightnews.ui.screen.welcome.WelcomeScreen
 
 @Composable
 fun MyNavGraph(
@@ -26,6 +27,9 @@ fun MyNavGraph(
         modifier = modifier
     ) {
         composable(route = Screen.Welcome.route) {
+            WelcomeScreen(onLogInSuccess = {
+
+            })
         }
         composable(route = Screen.Home.route) {
         }

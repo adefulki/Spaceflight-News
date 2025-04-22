@@ -1,0 +1,4 @@
+package io.github.adefulki.spaceflightnews.data.datasource
+
+class LocalRecentSearchDatasource {
+}

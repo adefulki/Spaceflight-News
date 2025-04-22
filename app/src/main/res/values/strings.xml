@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Spaceflight News</string>
 
-    <string name="com_auth0_client_id">R671m6P8R5HGwIc7GLH4CprVpbwOqSoV</string>
-    <string name="com_auth0_domain">dev-sdypfgp206vs0qrn.jp.auth0.com</string>
-    <string name="com_auth0_scheme">demo</string>
+    <string name="auth0_client_id">R671m6P8R5HGwIc7GLH4CprVpbwOqSoV</string>
+    <string name="auth0_domain">dev-sdypfgp206vs0qrn.jp.auth0.com</string>
+    <string name="auth0_scheme">demo</string>
+
+    <string name="login">Login dengan Auth0</string>
+    <string name="login_success">Login Berhasil</string>
+    <string name="login_failed">Login Gagal</string>
+    <string name="get_profile_success">Profil Berhasil Didapatkan</string>
+    <string name="get_profile_failed">Profil Gagal Didapatkan</string>
 </resources>
