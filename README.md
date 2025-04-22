@@ -20,6 +20,8 @@ This application aims to fulfill the exercise of the recruitment process
 - [Material Design 3 for Android](https://developer.android.com/jetpack/compose/designsystems/material3) - Modular and customizable Material Design UI components for Android.
 - [Version Catalogs](https://developer.android.com/build/migrate-to-catalogs) - Enable you to add and maintain dependencies and plugins in a scalable way.
 - [Coil](https://coil-kt.github.io/coil/) - An image loading library for Android backed by Kotlin Coroutines.
+- [Auth0](https://auth0.com/) - An authorization platform.
+- [Realm](https://github.com/realm/realm-java) - Mobile database that runs directly inside phones, tablets or wearables.
 
 ## 👨 Developed By
 Ade Fulki Hadian
